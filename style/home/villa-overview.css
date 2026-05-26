@@ -1,0 +1,477 @@
+.villaDetail {
+  background: #1f1f1f;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 69px 80px;
+}
+
+.villaDetail * {
+  box-sizing: border-box;
+}
+
+.villaDetail__tabs {
+  z-index: 90;
+  background: #1e1e1e;
+  border-bottom: 1px solid #3a3a3a;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  height: 50px;
+  display: grid;
+  position: sticky;
+  top: 68px;
+}
+
+.villaDetail__tabs button {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+}
+
+.villaDetail__tabs button.active {
+  color: #e3b673;
+}
+
+.villaDetail__tabs button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 124px;
+  height: 3px;
+  margin: auto;
+  background: #e3b673;
+}
+
+.villaDetail__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 575px;
+  gap: 50px;
+  align-items: start;
+}
+
+.villaDetail__left {
+  min-width: 0;
+}
+
+.villaBlock {
+  scroll-margin-top: 190px;
+  padding: 32px 0;
+  border-bottom: 1px solid #666;
+}
+
+.villaBlock h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-weight: 800;
+}
+
+.villaBlock h2 {
+  font-size: 30px;
+  margin: 0 0 22px;
+  font-weight: 800;
+}
+
+.villaBlock h3 {
+  font-size: 22px;
+  margin: 0 0 38px;
+  font-weight: 700;
+}
+
+.villaBlock p {
+  color: #b7b7b7;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.villaReview {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.villaLogoText {
+  color: #d6ac63;
+  padding-right: 24px;
+  border-right: 1px solid #aaa;
+}
+
+.villaLogoText span {
+  display: block;
+  font-family: cursive;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.villaLogoText small {
+  font-size: 9px;
+}
+
+.villaReview a,
+.villaAmenityMini a,
+.refundText a {
+  color: #168cff;
+  font-size: 18px;
+}
+
+.villaChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.villaChips span {
+  min-height: 50px;
+  background: #333;
+  border-radius: 5px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.villaChips span:last-child {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.villaChips svg:last-child {
+  color: #e3b673;
+}
+
+.villaGreat {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 38px;
+  font-size: 22px;
+}
+
+.villaGreat strong {
+  font-weight: 800;
+}
+
+.villaGreat span {
+  font-weight: 700;
+}
+
+.villaAmenityMini {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.villaAmenityMini div {
+  text-align: center;
+}
+
+.villaAmenityMini span {
+  width: 52px;
+  height: 52px;
+  background: #333;
+  border: 1px solid #4f4f4f;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  color: #ddd;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.villaAmenityMini p {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.policyBtns {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.policyBtns button {
+  min-width: 160px;
+  height: 48px;
+  border: 1px solid #d8ae6c;
+  color: #d8ae6c;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.sectionTitle {
+  border-left: 4px solid #d69851;
+  padding-left: 15px;
+}
+
+.spaceCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.spaceCard {
+  min-width: 0;
+}
+
+.spaceImg {
+  position: relative;
+  height: 290px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.spaceImg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.7));
+}
+
+.spaceImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spaceImg span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 6px 8px;
+  z-index: 2;
+}
+
+.spaceImg h4 {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  z-index: 2;
+  font-size: 24px;
+  margin: 0;
+}
+
+.spaceCard ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.spaceCard li {
+  font-size: 23px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* RIGHT STICKY BOOKING */
+
+.villaBookingSticky {
+  position: sticky;
+  top: 198px;
+  align-self: start;
+}
+
+.bookingCard {
+  background: #333;
+  border-radius: 5px;
+  padding: 24px 30px 30px;
+}
+
+.oldPrice {
+  color: #9e9e9e;
+  text-decoration: line-through;
+  margin: 0;
+  font-size: 18px;
+}
+
+.bookingCard h2 {
+  font-size: 32px;
+  margin: 0 0 38px;
+}
+
+.bookingCard h2 span {
+  color: #a9a9a9;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: transparent;
+}
+
+.bookingGrid div {
+  background: #1f1f1f;
+  min-height: 85px;
+  padding: 18px 20px;
+  border-radius: 5px;
+}
+
+.bookingGrid label {
+  display: block;
+  color: #e3b673;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.bookingGrid strong {
+  display: block;
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bestPrice {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 20px;
+}
+
+.offerBox {
+  background: #173225;
+  color: #15c964;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.selectDateBtn {
+  width: 100%;
+  height: 76px;
+  border: none;
+  background: #e3b673;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.refundText {
+  border-top: 1px solid #666;
+  padding-top: 18px;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.hostBox {
+  margin-top: 18px;
+  background: #333;
+  border-radius: 5px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hostBox strong {
+  font-size: 20px;
+  flex: 1;
+}
+
+.hostBox button {
+  border: 1px solid #e3b673;
+  color: #e3b673;
+  background: transparent;
+  padding: 13px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  .villaDetail {
+    padding: 0 24px 60px;
+  }
+
+  .villaDetail__layout {
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+  }
+
+  .villaDetail__tabs {
+    overflow-x: auto;
+    display: flex;
+  }
+
+  .villaDetail__tabs button {
+    min-width: 150px;
+  }
+
+  .spaceCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .villaDetail {
+    padding: 0 16px 50px;
+  }
+
+  .villaDetail__tabs {
+    top: 78px;
+    height: 60px;
+    overflow-x: auto;
+  }
+
+  .villaDetail__tabs button {
+    height: 60px;
+    min-width: 135px;
+    font-size: 16px;
+  }
+
+  .villaDetail__layout {
+    display: block;
+  }
+
+  .villaBookingSticky {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .villaBlock {
+    scroll-margin-top: 145px;
+  }
+
+  .villaBlock h1 {
+    font-size: 28px;
+  }
+
+  .villaChips span {
+    font-size: 16px;
+  }
+
+  .spaceImg {
+    height: 240px;
+  }
+
+  .spaceCard li {
+    font-size: 18px;
+  }
+
+  .bookingCard h2 {
+    font-size: 26px;
+  }
+}

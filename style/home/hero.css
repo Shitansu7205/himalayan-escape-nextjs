@@ -1,0 +1,405 @@
+.svHero {
+  background: #1f1f1f;
+  padding: 24px 0 28px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.svHero * {
+  box-sizing: border-box;
+}
+
+.svHero__wrap {
+  width: min(1765px, calc(100% - 70px));
+  margin: auto;
+  position: relative;
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.svHero__breadcrumb {
+  color: #f5b34d;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 11px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  position: relative;
+}
+
+.svHero__breadcrumb .muted {
+  color: #8f96a3;
+}
+
+.svHero__brochure {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #e8999d;
+  border-radius: 5px;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  padding: 7px 12px;
+  font-size: 14px;
+  display: flex;
+  box-shadow: 0 0 12px #ff8f9659;
+}
+
+.svHero__brochure svg {
+  color: #ee8f99;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.svHero__grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 16px;
+  height: 500px;
+}
+
+.svHero__main,
+.svHero__sideTop,
+.svHero__sideBottom {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.svHero__main {
+  border-radius: 12px;
+}
+
+.svHero__side {
+  display: grid;
+  grid-template-rows: 242px 242px;
+  gap: 16px;
+}
+
+.svHero__sideTop {
+  border-radius: 12px;
+}
+
+.svHero__sideBottom {
+  border-radius: 12px;
+}
+
+/* =========================
+   IMAGE HEIGHTS
+========================= */
+
+.svHero__main img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.svHero__sideTop img {
+  width: 100%;
+  height: 242px;
+  object-fit: cover;
+  display: block;
+}
+
+.svHero__sideBottom img {
+  width: 100%;
+  height: 242px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   OVERLAY EFFECT
+========================= */
+
+.svHero__main::after,
+.svHero__sideBottom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.35)
+  );
+  pointer-events: none;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.svHero__tag {
+  color: #000;
+  z-index: 2;
+  background: #fff;
+  border-radius: 5px;
+  padding: 7px 26px;
+  font-size: 13px;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  font-weight: 600;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.svHero__actions {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 3;
+}
+
+.svHero__actions button {
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  min-width: 164px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  transition: 0.3s ease;
+}
+
+.svHero__actions button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.svHero__floating {
+  position: absolute;
+  top: 19px;
+  right: 21px;
+  display: flex;
+  gap: 16px;
+  z-index: 4;
+}
+
+.svHero__floating button,
+.svHero__mobileHeart {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   MORE OVERLAY
+========================= */
+
+.svHero__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.svHero__overlay strong,
+.svHero__overlay span {
+  display: block;
+  color: #fff;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.12;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.svHero__whatsapp {
+  position: fixed;
+  left: 28px;
+  bottom: 18px;
+  width: 58px;
+  height: 58px;
+  z-index: 99;
+}
+
+.svHero__whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================
+   MOBILE DOTS
+========================= */
+
+.svHero__dots,
+.svHero__mobileHeart {
+  display: none;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1199px) {
+  .svHero__wrap {
+    width: calc(100% - 32px);
+  }
+
+  .svHero__grid {
+    height: auto;
+  }
+
+  .svHero__main img {
+    height: 450px;
+  }
+
+  .svHero__sideTop img,
+  .svHero__sideBottom img {
+    height: 217px;
+  }
+
+  .svHero__actions button {
+    min-width: 145px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .svHero {
+    padding: 0;
+    background: #1f1f1f;
+  }
+
+  .svHero__wrap {
+    width: 100%;
+  }
+
+  .svHero__breadcrumb,
+  .svHero__side,
+  .svHero__brochure,
+  .svHero__floating {
+    display: none;
+  }
+
+  .svHero__grid {
+    display: block;
+    height: auto;
+  }
+
+  .svHero__main {
+    height: 324px;
+    border-radius: 0;
+  }
+
+  .svHero__main img {
+    width: 100%;
+    height: 324px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .svHero__tag {
+    top: 24px;
+    left: 16px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .svHero__mobileHeart {
+    display: grid;
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+  }
+
+  .svHero__actions {
+    right: 24px;
+    left: auto;
+    bottom: 20px;
+    transform: none;
+    gap: 12px;
+  }
+
+  .svHero__actions button {
+    min-width: unset;
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  .svHero__actions button:first-child,
+  .svHero__actions button:last-child {
+    width: 67px;
+  }
+
+  .svHero__actions svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .svHero__actions .desktopText {
+    display: none;
+  }
+
+  .svHero__dots {
+    position: absolute;
+    left: 17px;
+    bottom: 21px;
+    display: flex;
+    gap: 5px;
+    z-index: 4;
+  }
+
+  .svHero__dots span {
+    width: 12px;
+    height: 12px;
+    background: #c6c6b7;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  .svHero__dots .active {
+    background: #fff;
+  }
+
+  .svHero__whatsapp {
+    display: none;
+  }
+}

@@ -1,0 +1,420 @@
+.villaHeader {
+  width: 100%;
+  height: 70px;
+  background: #1f1f1f;
+  border-top: 4px solid #5a4034;
+  border-bottom: 1px solid #343434;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.villaHeader * {
+  box-sizing: border-box;
+}
+
+.villaHeader__inner {
+  height: 100%;
+  width: min(1765px, calc(100% - 70px));
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.villaHeader__logo {
+  color: #d6ac63;
+  width: 210px;
+}
+
+.villaHeader__logo span {
+  font-size: 42px;
+  font-family: cursive;
+  font-weight: 400;
+  line-height: 1;
+  display: block;
+}
+
+.villaHeader__logo small {
+  font-size: 10px;
+  margin-left: 20px;
+  color: #d6ac63;
+}
+
+.villaHeader__searchPill {
+  width: 570px;
+  height: 40px;
+  border-radius: 40px;
+  background: #333333;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 13px 0 24px;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.villaHeader__searchPill span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.villaHeader__searchPill i {
+  width: 1px;
+  height: 25px;
+  background: #8b7d78;
+}
+
+.villaHeader__searchPill-text {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.villaHeader__searchPill b {
+  margin-left: auto;
+  width: 27px;
+  height: 27px;
+  background: #fff;
+  color: #111;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.villaHeader__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.villaHeader__user {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.villaHeader__contact {
+  color: #fff;
+    cursor: pointer;
+    background: #000;
+    border: none;
+    border-radius: 14px;
+    align-items: center;
+    gap: 12px;
+    height: 41px;
+    padding: 0 17px;
+    font-size: 17px;
+    font-weight: 300;
+    display: flex;
+}
+
+/* MOBILE HEADER */
+
+.villaMobileHeader {
+  display: none;
+}
+
+/* SEARCH OVERLAY */
+
+.villaSearchOverlay {
+  position: fixed;
+  inset: 100px 0 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 998;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.villaSearchBox {
+  background: #1f1f1f;
+  width: 100%;
+  padding: 16px 69px 18px;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.villaSearchBox__top {
+  display: grid;
+  grid-template-columns: 1.35fr 1.05fr 1.05fr 1.05fr 0.57fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.villaSearchField {
+  height: 74px;
+  border: 1px solid #454545;
+  border-radius: 5px;
+  padding: 18px 18px 10px;
+  position: relative;
+  background: #1f1f1f;
+}
+
+.villaSearchField.active {
+  background: #79664e;
+  border-color: #9c835f;
+}
+
+.villaSearchField label {
+  position: absolute;
+  top: -9px;
+  left: 18px;
+  background: #1f1f1f;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.villaSearchField.active label {
+  background: #1f1f1f;
+}
+
+.villaSearchField strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.villaSearchField span {
+  display: block;
+  color: #8d8d8d;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.villaSearchBtn {
+  height: 74px;
+  border-radius: 5px;
+  background: #000;
+  border: 1px solid #805047;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.villaCalendar {
+  width: 1050px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: #1f1f1f;
+}
+
+.villaCalendar__month {
+  position: relative;
+}
+
+.villaCalendar__month h3 {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.villaCalendar__month h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #c7c7c7;
+  margin-top: 18px;
+}
+
+.villaCalendar .arrow {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  background: transparent;
+  border: none;
+  color: #0d0d0d;
+  font-size: 36px;
+}
+
+.villaCalendar .arrow.right {
+  left: auto;
+  right: 0;
+  color: #0d0d0d;
+}
+
+.week,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.week span {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.week .red {
+  color: red;
+}
+
+.days {
+  row-gap: 34px;
+  margin-top: 58px;
+}
+
+.days span {
+  color: #c3c3c3;
+  font-size: 20px;
+  font-weight: 700;
+  height: 24px;
+}
+
+.days .selected {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.villaSearchBox__bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 1050px;
+  margin: 32px auto 0;
+}
+
+.villaSearchBox__bottom button {
+  width: 124px;
+  height: 46px;
+  background: #1f1f1f;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* TABLET */
+
+@media (max-width: 1199px) {
+  .villaHeader__inner {
+    width: calc(100% - 32px);
+  }
+
+  .villaHeader__searchPill {
+    width: 520px;
+    font-size: 16px;
+  }
+
+  .villaCalendar,
+  .villaSearchBox__bottom {
+    width: 100%;
+  }
+
+  .villaSearchBox {
+    padding: 16px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .villaHeader {
+    display: none;
+  }
+
+  .villaMobileHeader {
+    height: 78px;
+    background: #1f1f1f;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 28px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .villaMobileHeader > button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 0;
+  }
+
+  .villaMobileHeader h3 {
+    flex: 1;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .villaMobileHeader__icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .villaMobileHeader__icons button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #f2f2f2;
+    color: #111;
+    display: grid;
+    place-items: center;
+  }
+
+  .villaMobileHeader__icons .pink {
+    background: #f5b7c7;
+    color: #fff;
+  }
+
+  .villaSearchOverlay {
+    inset: 78px 0 0;
+    overflow-y: auto;
+  }
+
+  .villaSearchBox {
+    padding: 16px;
+  }
+
+  .villaSearchBox__top {
+    grid-template-columns: 1fr;
+  }
+
+  .villaSearchField,
+  .villaSearchBtn {
+    height: 62px;
+  }
+
+  .villaSearchField strong {
+    font-size: 17px;
+  }
+
+  .villaCalendar {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    width: 100%;
+  }
+
+  .days {
+    row-gap: 24px;
+    margin-top: 36px;
+  }
+
+  .days span {
+    font-size: 17px;
+  }
+
+  .villaSearchBox__bottom {
+    width: 100%;
+  }
+}
