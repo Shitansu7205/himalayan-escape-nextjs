@@ -22,7 +22,7 @@ export default function VillaHeader() {
       <header className="villaHeader">
         <div className="villaHeader__inner">
           <div className="villaHeader__logo">
-            <span><img src="https://www.stayvista.com/assets/images/general/vieda_logo.svg" alt="Vieda Logo" /></span>
+            <span><img src="/images/logo.png" alt="Vieda Logo" style={{width:"90px"}}/></span>
           </div>
 
           <button

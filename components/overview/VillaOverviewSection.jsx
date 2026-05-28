@@ -1,19 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Users, Bed, Bath, Coffee, FileText, Info, Phone } from "lucide-react";
+import {
+  Bed,
+  Bath,
+  Coffee,
+  FileText,
+  Info,
+  Phone,
+  Users,
+  Home,
+  ThermometerSun,
+  Mountain,
+  Baby,
+} from "lucide-react";
 import "../../style/home/villa-overview.css";
 
 const tabs = [
   "Overview",
-  "Highlights",
+  "About Us",
+  "Experiences",
   "Refund Policy",
   "Spaces",
   "Reviews",
   "Amenities",
   "Meals",
   "Location",
-  "Experiences",
   "FAQ's",
 ];
 
@@ -47,6 +59,41 @@ export default function VillaOverviewSection() {
     section?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const reviews = [
+    {
+      name: "Rishiv Sharma",
+      avatar: "RS",
+      time: "2 weeks ago on Google",
+      rating: "5",
+      review:
+        "Excellent stay and service. The place was very beautiful and luxurious. Away from city chaos. Better to stay here than Shimla city. Just one suggestion, the hot water should be continuously available.",
+      tags: ["Stay", "Luxury", "Service", "View"],
+      link: "https://www.google.com/maps/contrib/101091405777478671558/reviews?hl=en",
+    },
+
+    {
+      name: "Kuldeep Birwal",
+      avatar: "KB",
+      time: "2 weeks ago on Google",
+      rating: "5",
+      review:
+        "An absolutely luxurious and serene escape in the hills of Himachal Pradesh. Shilayvas Cottages offers a perfect blend of elegance, comfort, and natural beauty. The cottages are beautifully designed with premium interiors, breathtaking valley views, and a peaceful atmosphere that instantly relaxes you.",
+      tags: ["Luxury", "Hospitality", "Nature", "Food"],
+      link: "https://www.google.com/maps/contrib/110258072321805160692/reviews?hl=en",
+    },
+
+    {
+      name: "Shonick Roach",
+      avatar: "SR",
+      time: "2 weeks ago on Google",
+      rating: "5",
+      review:
+        "Stayed at Shilayvas Cottage recently and honestly had a really peaceful experience. The location is beautiful with amazing mountain views and fresh air all around. The rooms were clean, cozy, and well maintained.",
+      tags: ["Peaceful", "Mountain View", "Rooms", "Nature"],
+      link: "https://www.google.com/maps/contrib/104413053557823133419/reviews/@29.8659165,76.980712,8z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en&entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D",
+    },
+  ];
+
   return (
     <section className="villaDetail">
       <div className="villaDetail__tabs">
@@ -64,77 +111,126 @@ export default function VillaOverviewSection() {
       <div className="villaDetail__layout">
         <div className="villaDetail__left">
           <section id="overview" className="villaBlock">
-            <h1>The Mohru Estate - Chail w/ Heated Pool</h1>
+            <h1>Welcome to Shilayvas Cottages</h1>
             <h3>Shimla, Himachal Pradesh</h3>
 
             <div className="villaReview">
               <div className="villaLogoText">
-                <span>Vieda</span>
-                <small>by STAYVISTA</small>
+                <span>
+                  <img
+                    src="/images/logo.png"
+                    alt="Vieda Logo"
+                    style={{ width: "100px" }}
+                  />
+                </span>
               </div>
               <a href="#">39 Reviews</a>
             </div>
 
             <div className="villaChips">
               <span>
-                <Users size={22} /> Up to 18 Guests
+                <Users size={20} /> Up to 45 Guests
               </span>
+
               <span>
-                <Bed size={22} /> 6 Rooms <Info size={16} />
+                <Home size={20} /> 12 Cottages
               </span>
+
               <span>
-                <Bath size={22} /> 9 Baths
+                <Bath size={20} /> Bathtub
               </span>
+
               <span>
-                <Coffee size={22} /> Meals Available
+                <ThermometerSun size={20} /> Central Heating
               </span>
+
               <span>
                 <FileText size={20} /> View Brochure
               </span>
             </div>
 
             <div className="villaGreat">
-              <strong>Great for:</strong>
-              <span>Senior Citizens</span>
-              <span>View</span>
-              <span>Kids</span>
-            </div>
+              <span>
+                <Users size={18} />
+                Ideal for Families & Couples
+              </span>
 
-            <div className="villaAmenityMini">
-              <div>
-                <span>♨</span>
-                <p>
-                  Heated
-                  <br />
-                  Pool
-                </p>
-              </div>
-              <div>
-                <span>❧</span>
-                <p>Lawn</p>
-              </div>
-              <div>
-                <span>⌂</span>
-                <p>Gazebo</p>
-              </div>
-              <div>
-                <span>▤</span>
-                <p>Balcony</p>
-              </div>
-              <div>
-                <span>⇳</span>
-                <p>Elevator</p>
-              </div>
-              <a href="#">+29 Amenities</a>
+              <span>
+                <Mountain size={18} />
+                Peaceful Location in Kufri
+              </span>
+
+              <span>
+                <Baby size={18} />
+                Spacious & Elegant Interiors
+              </span>
+              <a href="#" className="view-more-icons">
+                +29 More{" "}
+              </a>
             </div>
           </section>
 
-          <section id="highlights" className="villaBlock">
-            <h2>Highlights</h2>
+          <section id="about-us" className="villaBlock">
+            <h1>About Us</h1>
             <p>
-              A luxury hillside villa with heated pool, mountain views, spacious
-              bedrooms, lawn, gazebo, balconies and premium interiors.
+              Nestled amidst the serene hills of Kufri, Shilayvas Cottages
+              offers a luxurious mountain escape surrounded by breathtaking
+              Himalayan views. Designed with elegant stone architecture and
+              modern comforts, our premium cottages provide the perfect blend of
+              nature, comfort, and privacy for families, couples, and travelers
+              seeking a peaceful getaway near Shimla.
             </p>
+            <br />
+            <p>
+              Our property features 12 beautifully crafted cottages equipped
+              with spacious interiors, private balconies, cozy central heating,
+              modern bathrooms with bathtubs, and panoramic valley views. Wake
+              up to fresh mountain air, enjoy mesmerizing sunsets, and
+              experience the calmness of the hills in a truly relaxing
+              atmosphere.
+            </p>
+            <div className="policyBtns">
+              <a href="/refund-policy">
+                <button>View More</button>
+              </a>
+              <a href="/refund-policy">
+                {" "}
+                <button>Book Now</button>
+              </a>
+            </div>
+          </section>
+
+          <section
+            id="experiences"
+            className="villaExperienceSection villaBlock"
+          >
+            <h1>Shilayvas's Experiences</h1>
+
+            <div className="villaExperienceGrid">
+              <div className="villaExperienceCard">
+                <img src="/images/exterior/2.jpeg" alt="Butler Service" />
+                <div className="overlay"></div>
+                <h3>Luxury Cottages</h3>
+              </div>
+
+              <div className="villaExperienceCard">
+                <img src="/images/exterior/2.jpeg" alt="Meals" />
+                <div className="overlay"></div>
+                <h3>Elegant Interiors</h3>
+              </div>
+
+              <div className="villaExperienceCard">
+                <img src="/images/exterior/2.jpeg" alt="Luxury Interiors" />
+                <div className="overlay"></div>
+                <h3>Peaceful Location in Kufri</h3>
+              </div>
+
+              <div className="villaExperienceCard">
+                <img src="/images/dining/2.jpeg" alt="Curated Experiences" />
+                <div className="overlay"></div>
+                <h3>Restaurant</h3>
+              </div>
+            </div>
           </section>
 
           <section id="refund-policy" className="villaBlock">
@@ -176,8 +272,44 @@ export default function VillaOverviewSection() {
           </section>
 
           <section id="reviews" className="villaBlock">
-            <h2>Reviews</h2>
-            <p>Guests love the view, interiors, pool and peaceful location.</p>
+             <h1>Guest Reviews</h1>
+
+            <div className="villaReviewsGrid">
+              {reviews.map((review, index) => (
+                <div className="villaReviewCard" key={index}>
+                  <div className="reviewTop">
+                    <div className="reviewUser">
+                      <div className="reviewAvatar">{review.avatar}</div>
+
+                      <div>
+                        <h4>{review.name}</h4>
+                        <span>{review.time}</span>
+                      </div>
+                    </div>
+
+                    <div className="reviewRating">
+                      ⭐ <strong>{review.rating}</strong>/5
+                    </div>
+                  </div>
+
+                  <div className="reviewTags">
+                    {review.tags.map((tag, i) => (
+                      <span key={i}>✔ {tag}</span>
+                    ))}
+                  </div>
+
+                  <p>{review.review}</p>
+
+                  <a
+                    href={review.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read More
+                  </a>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section id="amenities" className="villaBlock">
@@ -197,11 +329,6 @@ export default function VillaOverviewSection() {
             <p>
               Located in Shimla, Himachal Pradesh with beautiful hill views.
             </p>
-          </section>
-
-          <section id="experiences" className="villaBlock">
-            <h2>Experiences</h2>
-            <p>Bonfire, nature walks, sightseeing and family gatherings.</p>
           </section>
 
           <section id="faqs" className="villaBlock">
