@@ -13,6 +13,17 @@ import {
   ThermometerSun,
   Mountain,
   Baby,
+  Flame,
+  CookingPot,
+  Snowflake,
+  CalendarX,
+  Wifi,
+  Car,
+  Trees,
+  Tv,
+  Music,
+  Dumbbell,
+  Waves,
 } from "lucide-react";
 import "../../style/home/villa-overview.css";
 
@@ -20,17 +31,38 @@ const tabs = [
   "Overview",
   "About Us",
   "Experiences",
-  "Refund Policy",
-  "Spaces",
-  "Reviews",
   "Amenities",
-  "Meals",
+  "Gallery",
+  "Rooms",
   "Location",
-  "FAQ's",
+  "Reviews",
+  "Refund Policy",
 ];
 
 export default function VillaOverviewSection() {
   const [activeTab, setActiveTab] = useState("Overview");
+  const [activeImage, setActiveImage] = useState(null);
+
+  const galleryImages = [
+    "/images/dining/1.jpeg",
+    "/images/dining/2.jpeg",
+    "/images/dining/3.jpeg",
+    "/images/dining/4.jpeg",
+    "/images/dining/5.jpeg",
+
+    "/images/exterior/1.jpeg",
+    "/images/exterior/2.jpeg",
+    "/images/exterior/3.jpeg",
+    "/images/exterior/4.jpeg",
+
+    "/images/play-area/1.jpeg",
+    "/images/play-area/2.jpeg",
+    "/images/play-area/3.jpeg",
+
+    "/images/facade/1.jpeg",
+    "/images/facade/2.jpeg",
+    "/images/facade/3.jpeg",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -190,10 +222,10 @@ export default function VillaOverviewSection() {
               atmosphere.
             </p>
             <div className="policyBtns">
-              <a href="/refund-policy">
+              <a href="#">
                 <button>View More</button>
               </a>
-              <a href="/refund-policy">
+              <a href="#">
                 {" "}
                 <button>Book Now</button>
               </a>
@@ -233,46 +265,192 @@ export default function VillaOverviewSection() {
             </div>
           </section>
 
-          <section id="refund-policy" className="villaBlock">
-            <h2>Refund Policy</h2>
-            <div className="policyBtns">
-              <button>Refund Policy</button>
-              <button>House Rules</button>
+          <section id="amenities" className="villaAmenitiesSection villaBlock">
+            <div className="villaAmenitiesContainer">
+              <h1>Our Amenities</h1>
+
+              <div className="villaAmenitiesGrid">
+                {/* Item */}
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <Flame size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Bonfire</h4>
+                    <p>₹1,500</p>
+                  </div>
+                </div>
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <CookingPot size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Barbecue</h4>
+                    <p>₹1,500 / Person</p>
+                  </div>
+                </div>
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <Bath size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Bathtub</h4>
+                  </div>
+                </div>
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <Snowflake size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Centralized AC</h4>
+                  </div>
+                </div>
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <CalendarX size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Cancellation Policy</h4>
+                    <p>7 Days Before Check-In</p>
+                  </div>
+                </div>
+
+                <div className="villaAmenityItem">
+                  <div className="villaAmenityIcon">
+                    <Wifi size={22} strokeWidth={1.7} />
+                  </div>
+
+                  <div className="villaAmenityContent">
+                    <h4>Free Wi-Fi</h4>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p>
-              Check-in time: <b>2:00 PM</b>, Check-out time: <b>11:00 AM</b>
-            </p>
-            <small>
-              Note: Early check-in and late check-out is subject to
-              availability.
-            </small>
           </section>
 
-          <section id="spaces" className="villaBlock">
-            <h2 className="sectionTitle">Spaces</h2>
+          <section id="gallery" className="villaImageGallerySection villaBlock">
+            <div className="villaImageGalleryContainer">
+              <h1>Our Gallery</h1>
 
-            <div className="spaceCards">
-              {[1, 2, 3].map((item) => (
-                <div className="spaceCard" key={item}>
-                  <div className="spaceImg">
-                    <img src="/images/exterior/1.jpeg" alt="bedroom" />
-                    <span>King-Size Bed</span>
-                    <h4>Bedroom {item}</h4>
+              <div className="villaImageGalleryGrid">
+                {galleryImages.map((img, index) => (
+                  <div
+                    className="villaImageGalleryCard"
+                    key={index}
+                    onClick={() => setActiveImage(img)}
+                  >
+                    <img src={img} alt="Villa" />
                   </div>
-                  <ul>
-                    <li>This bedroom is on the ground floor.</li>
-                    <li>
-                      Includes an AC, TV, Wi-Fi, workstation and extra mattress.
-                    </li>
-                    <li>Ensuite bathroom. Attached Balcony.</li>
-                  </ul>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Popup */}
+
+          {activeImage && (
+            <div
+              className="villaGalleryPopupOverlay"
+              onClick={() => setActiveImage(null)}
+            >
+              <div className="villaGalleryPopupContent">
+                <img src={activeImage} alt="Popup" />
+              </div>
+            </div>
+          )}
+
+          <section id="rooms" className="luxuryCottageSection villaBlock">
+            <div className="luxuryCottageContainer">
+              <h1>Luxury Cottage 12</h1>
+
+              {/* Images Row */}
+
+              <div className="luxuryCottageGrid">
+                <div className="luxuryCottageCard">
+                  <img src="/images/calmara/1.jpg" alt="Luxury Cottage" />
                 </div>
-              ))}
+
+                <div className="luxuryCottageCard">
+                  <img src="/images/calmara/2.jpg" alt="Luxury Cottage" />
+                </div>
+
+                <div className="luxuryCottageCard">
+                  <img src="/images/calmara/3.jpg" alt="Luxury Cottage" />
+                </div>
+              </div>
+
+              {/* Description */}
+
+              <div className="luxuryCottageContent">
+                <p style={{ textAlign: "justify" }}>
+                  Experience a premium luxury stay surrounded by breathtaking
+                  mountain views, elegant interiors, serene landscapes, and
+                  peaceful nature. Luxury Cottage offers the perfect blend of
+                  comfort, privacy, warmth, and modern amenities designed for
+                  families, couples, friends, and memorable group getaways.
+                  Enjoy spacious living areas, cozy bedrooms, scenic outdoor
+                  spaces, and an unforgettable retreat experience in the heart
+                  of nature.
+                </p>
+
+                <div className="policyBtns">
+                  <a href="#">
+                    <button>View More</button>
+                  </a>
+                  <a href="#">
+                    {" "}
+                    <button>Book Now</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="location" className="villaLocationSection villaBlock">
+            <div className="villaLocationContainer">
+              <h1>Our Location</h1>
+
+              {/* Map */}
+
+              <div className="villaLocationMapWrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.2834029531!2d77.2478678!3d31.0407671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390581001eeee7bf%3A0xdb28500a65c076dc!2sShilayvas%20Cottages!5e1!3m2!1sen!2sin!4v1780087047526!5m2!1sen!2sin"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Villa Location"
+                ></iframe>
+              </div>
+
+              {/* Description */}
+
+              <div className="villaLocationDescription ">
+                <p>
+                  Located in the beautiful hills of Shimla, Himachal Pradesh,
+                  this luxury villa offers breathtaking mountain views, peaceful
+                  surroundings, and a perfect escape into nature. Enjoy the
+                  pleasant weather, nearby tourist attractions, and a relaxing
+                  stay surrounded by lush greenery.
+                </p>
+              </div>
             </div>
           </section>
 
           <section id="reviews" className="villaBlock">
-             <h1>Guest Reviews</h1>
+            <h1>Guest Reviews</h1>
 
             <div className="villaReviewsGrid">
               {reviews.map((review, index) => (
@@ -311,31 +489,64 @@ export default function VillaOverviewSection() {
               ))}
             </div>
           </section>
+          <section id="refund-policy" className="villaPolicySection villaBlock">
+            <div className="villaPolicyContainer">
+              <h1>Refund Policy & House Rules</h1>
 
-          <section id="amenities" className="villaBlock">
-            <h2>Amenities</h2>
-            <p>
-              Wi-Fi, heated pool, parking, gazebo, lawn, balcony and elevator.
-            </p>
-          </section>
+              {/* Buttons */}
 
-          <section id="meals" className="villaBlock">
-            <h2>Meals</h2>
-            <p>Fresh meals are available on request with prior confirmation.</p>
-          </section>
+               <div className="policyBtns">
+                  <a href="#">
+                    <button>Refund Policy</button>
+                  </a>
+                  <a href="#">
+                    {" "}
+                    <button>House Rules</button>
+                  </a>
+                </div>
 
-          <section id="location" className="villaBlock">
-            <h2>Location</h2>
-            <p>
-              Located in Shimla, Himachal Pradesh with beautiful hill views.
-            </p>
-          </section>
+              {/* Policy List */}
 
-          <section id="faqs" className="villaBlock">
-            <h2>FAQ's</h2>
-            <p>
-              For booking, cancellation and meal details, connect with host.
-            </p>
+              <div className="villaPolicyContent">
+                <ul className="villaPolicyList">
+                  <li>
+                    Check-in time: <strong>2:00 PM</strong>
+                  </li>
+
+                  <li>
+                    Check-out time: <strong>11:00 AM</strong>
+                  </li>
+
+                  <li>
+                    Early check-in and late check-out are subject to
+                    availability.
+                  </li>
+
+                  <li>
+                    Guests are requested to maintain cleanliness and hygiene.
+                  </li>
+
+                  <li>
+                    Loud music and parties are not allowed after 10:00 PM.
+                  </li>
+
+                  <li>Smoking inside the rooms is strictly prohibited.</li>
+
+                  <li>Pets are allowed only with prior approval.</li>
+
+                  <li>Any damage to property will be chargeable.</li>
+
+                  <li>
+                    Cancellation made within 7 days of check-in may not be
+                    eligible for refund.
+                  </li>
+
+                  <li>
+                    Valid government ID proof is mandatory during check-in.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
 

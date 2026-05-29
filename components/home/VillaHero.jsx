@@ -18,11 +18,8 @@ export default function VillaHero() {
         <div className="svHero__breadcrumb">
           <span>Home</span>
           <ChevronRight size={18} />
-          <span>Villas in Shimla</span>
-          <ChevronRight size={18} />
-          <span className="muted">
-            The Mohru Estate - Chail w/ Heated Pool Villa in Shimla
-          </span>
+          <span>Welcome to Shilayvas Cottages</span>
+      
 
           <button className="svHero__brochure">
             <FileText size={18} />
@@ -67,7 +64,7 @@ export default function VillaHero() {
 
           <div className="svHero__side">
             <div className="svHero__sideTop">
-              <img src="/images/exterior/1.jpeg" alt="interior" />
+              <img src="/images/exterior/3.jpeg" alt="interior" />
 
               <div className="svHero__floating">
                 <button>
@@ -80,17 +77,17 @@ export default function VillaHero() {
             </div>
 
             <div className="svHero__sideBottom">
-              <img src="/images/exterior/1.jpeg" alt="pool" />
-              <div className="svHero__overlay">
+              <img src="/images/corridoor/1.jpg" alt="pool" />
+              {/* <div className="svHero__overlay">
                 <strong>+49</strong>
                 <span>More</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
-        <a className="svHero__whatsapp" href="#">
-          <img src="/assets/icons/whatsapp.png" alt="whatsapp" />
+        <a className="svHero__whatsapp" href="telto:+918627045425">
+          <img src="/images/icons.png" alt="whatsapp" />
         </a>
       </div>
     </section>

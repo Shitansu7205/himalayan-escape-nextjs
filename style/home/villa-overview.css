@@ -67,7 +67,7 @@
 }
 
 .villaBlock h1 {
-  margin: 0 0 12px;
+  margin: 0 0 20px;
   font-weight: 600;
   font-size: 28px;
   line-height: 40px;
@@ -767,5 +767,685 @@
 
   .villaReviewCard a {
     font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================================
+   PREMIUM VILLA AMENITIES DESIGN
+========================================= */
+
+.villaAmenitiesSection {
+  padding: 50px 25px;
+  position: relative;
+}
+
+.villaAmenitiesContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+
+.villaAmenitiesTitle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 50px;
+}
+
+.villaAmenitiesTitle span {
+  width: 4px;
+  height: 36px;
+  background: #b6985a;
+  border-radius: 20px;
+}
+
+.villaAmenitiesTitle h2 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Grid Layout */
+
+.villaAmenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px 70px;
+}
+
+/* Single Item */
+
+.villaAmenityItem {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Icon Box */
+
+.villaAmenityIcon {
+  width: 40px;
+  height: 40px;
+  min-width: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d7d7d7;
+  transition: 0.3s ease;
+}
+
+.villaAmenityItem:hover .villaAmenityIcon {
+  border-color: #b6985a;
+  color: #b6985a;
+  background: rgba(182, 152, 90, 0.06);
+}
+
+/* Text */
+
+.villaAmenityContent h4 {
+  margin: 0;
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.villaAmenityContent p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #39d353;
+  font-weight: 500;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .villaAmenitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .villaAmenitiesSection {
+    padding: 60px 18px;
+  }
+
+  .villaAmenitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .villaAmenitiesTitle h2 {
+    font-size: 30px;
+  }
+
+  .villaAmenityIcon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+  }
+
+  .villaAmenityContent h4 {
+    font-size: 18px;
+  }
+
+  .villaAmenityContent p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   VILLA GALLERY SECTION
+========================================= */
+
+.villaImageGallerySection {
+  padding: 50px 20px;
+}
+
+.villaImageGalleryContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+
+.villaImageGalleryHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 45px;
+}
+
+.villaImageGalleryHeading span {
+  width: 4px;
+  height: 35px;
+  background: #b6985a;
+  border-radius: 20px;
+}
+
+.villaImageGalleryHeading h2 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Grid */
+
+.villaImageGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+/* Card */
+
+.villaImageGalleryCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  height: 170px;
+  background: #1b1b1b;
+}
+
+.villaImageGalleryCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.villaImageGalleryCard:hover img {
+  transform: scale(1.08);
+}
+
+/* Popup */
+
+.villaGalleryPopupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.villaGalleryPopupContent {
+  max-width: 950px;
+  width: 100%;
+}
+
+.villaGalleryPopupContent img {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .villaImageGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .villaImageGallerySection {
+    padding: 60px 15px;
+  }
+
+  .villaImageGalleryGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .villaImageGalleryHeading h2 {
+    font-size: 30px;
+  }
+
+  .villaImageGalleryCard {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .villaImageGalleryHeading h2 {
+    font-size: 26px;
+  }
+
+  .villaImageGalleryCard {
+    height: 210px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   VILLA LOCATION SECTION
+========================================= */
+
+.villaLocationSection {
+  padding: 30px 20px;
+}
+
+.villaLocationContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+
+.villaLocationHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.villaLocationHeading span {
+  width: 4px;
+  height: 35px;
+  background: #b6985a;
+  border-radius: 20px;
+}
+
+.villaLocationHeading h2 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Map */
+
+.villaLocationMapWrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.villaLocationMapWrapper iframe {
+  width: 100%;
+  display: block;
+  filter: grayscale(10%);
+}
+
+/* Description */
+
+.villaLocationDescription {
+  margin-top: 30px;
+}
+
+.villaLocationDescription p {
+     color: #b7b7b7;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .villaLocationSection {
+    padding: 60px 15px;
+  }
+
+  .villaLocationHeading h2 {
+    font-size: 30px;
+  }
+
+  .villaLocationMapWrapper iframe {
+    height: 350px;
+  }
+
+  .villaLocationDescription p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .villaLocationHeading {
+    margin-bottom: 30px;
+  }
+
+  .villaLocationHeading h2 {
+    font-size: 26px;
+  }
+
+  .villaLocationMapWrapper iframe {
+    height: 280px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   LUXURY COTTAGE SECTION
+========================================= */
+
+.luxuryCottageSection {
+  padding: 50px 20px;
+}
+
+.luxuryCottageContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+
+.luxuryCottageHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 45px;
+}
+
+.luxuryCottageHeading span {
+  width: 4px;
+  height: 35px;
+  background: #b6985a;
+  border-radius: 20px;
+}
+
+.luxuryCottageHeading h2 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Grid */
+
+.luxuryCottageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+
+.luxuryCottageCard {
+  overflow: hidden;
+  border-radius: 14px;
+  background: #1c1c1c;
+  height: 260px;
+}
+
+.luxuryCottageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.luxuryCottageCard:hover img {
+  transform: scale(1.08);
+}
+
+/* Content */
+
+.luxuryCottageContent {
+  margin-top: 35px;
+}
+
+.luxuryCottageContent p {
+  color: #b7b7b7;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Button */
+
+.luxuryCottageBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  border: 1px solid #b6985a;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.luxuryCottageBtn:hover {
+  background: #b6985a;
+  color: #141414;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .luxuryCottageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .luxuryCottageSection {
+    padding: 60px 15px;
+  }
+
+  .luxuryCottageGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .luxuryCottageHeading h2 {
+    font-size: 30px;
+  }
+
+  .luxuryCottageCard {
+    height: 240px;
+  }
+
+  .luxuryCottageContent p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .luxuryCottageBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxuryCottageHeading h2 {
+    font-size: 26px;
+  }
+
+  .luxuryCottageCard {
+    height: 210px;
+  }
+
+  .luxuryCottageContent p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* =========================================
+   POLICY SECTION
+========================================= */
+
+.villaPolicySection {
+  padding: 30px 20px;
+}
+
+.villaPolicyContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+
+.villaPolicyHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.villaPolicyHeading span {
+  width: 4px;
+  height: 35px;
+  background: #b6985a;
+  border-radius: 20px;
+}
+
+.villaPolicyHeading h2 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Buttons */
+
+.villaPolicyBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.villaPolicyBtns button {
+  background: transparent;
+  border: 1px solid #b6985a;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.villaPolicyBtns button:hover {
+  background: #b6985a;
+  color: #141414;
+}
+
+/* Content */
+
+.villaPolicyContent {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  padding: 35px;
+}
+
+/* List */
+
+.villaPolicyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.villaPolicyList li {
+  position: relative;
+  padding-left: 28px;
+  color: #d8d8d8;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.villaPolicyList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #b6985a;
+}
+
+.villaPolicyList strong {
+  color: #ffffff;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .villaPolicySection {
+    padding: 60px 15px;
+  }
+
+  .villaPolicyHeading h2 {
+    font-size: 30px;
+  }
+
+  .villaPolicyContent {
+    padding: 25px;
+  }
+
+  .villaPolicyList li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .villaPolicyBtns button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .villaPolicyHeading h2 {
+    font-size: 26px;
+  }
+
+  .villaPolicyContent {
+    padding: 20px;
   }
 }

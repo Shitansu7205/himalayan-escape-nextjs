@@ -22,14 +22,23 @@ export default function VillaHeader() {
       <header className="villaHeader">
         <div className="villaHeader__inner">
           <div className="villaHeader__logo">
-            <span><img src="/images/logo.png" alt="Vieda Logo" style={{width:"90px"}}/></span>
+            <span>
+              <img
+                src="/images/logo.png"
+                alt="Vieda Logo"
+                style={{ width: "90px" }}
+              />
+            </span>
           </div>
 
           <button
             className="villaHeader__searchPill"
-            onClick={() => setOpenSearch(true)}
+            // onClick={() => setOpenSearch(true)}
+              onClick={() => window.location.href = "tel:8627045425"}
           >
-            <span className="villaHeader__searchPill-text">The Mohru Estate Chail W/ He...</span>
+            <span className="villaHeader__searchPill-text">
+              The Mohru Estate Chail W/ He...
+            </span>
             <i></i>
             <span className="villaHeader__searchPill-text">Select Date</span>
             <i></i>
@@ -40,11 +49,17 @@ export default function VillaHeader() {
           </button>
 
           <div className="villaHeader__right">
-            <button className="villaHeader__user">
+            <button
+              className="villaHeader__user"
+              onClick={() => (window.location.href = "tel:+918627045425")}
+            >
               <User size={20} />
             </button>
 
-            <button className="villaHeader__contact">
+            <button
+              className="villaHeader__contact"
+              onClick={() => (window.location.href = "tel:+918627045425")}
+            >
               <Phone size={20} />
               Get in touch
               <ChevronDown size={20} />
