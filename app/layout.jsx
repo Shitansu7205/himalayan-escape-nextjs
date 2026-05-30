@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Luxury Villa UI",
-  description: "Premium Villa Booking UI",
+  title: "Shilayvas Cottages | Luxury Stay in Kufri, Shimla",
+  description:
+    "Experience luxury and comfort at Shilayvas Cottages in Kufri, Shimla. Enjoy premium cottages, breathtaking Himalayan views, modern amenities, and a peaceful mountain getaway.",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -22,7 +29,15 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}{" "}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+          }}
+        />
+      </body>
     </html>
   );
 }

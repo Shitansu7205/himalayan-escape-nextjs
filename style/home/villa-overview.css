@@ -347,7 +347,7 @@
 
 .bookingCard h2 {
   font-size: 32px;
-  margin: 0 0 38px;
+  margin: 0 0 18px;
 }
 
 .bookingCard h2 span {
@@ -384,11 +384,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.hostInfoNew{
+  display: flex;
+  flex-direction: row;
+  justify-content: evenly;
+  align-items: center;
+  gap: 6px;
+}
 
 .bestPrice {
   text-align: center;
-  margin: 24px 0;
-  font-size: 20px;
+  margin: 9px 0;
+  font-size: 14px;
 }
 
 .offerBox {
@@ -428,19 +435,21 @@
   align-items: center;
   gap: 18px;
 }
-
+.villaContactCard{
+  
+}
 .hostBox strong {
-  font-size: 20px;
+  font-size: 14px;
   flex: 1;
 }
 
 .hostBox button {
-  border: 1px solid #e3b673;
-  color: #e3b673;
-  background: transparent;
-  padding: 13px 22px;
-  border-radius: 30px;
-  font-size: 16px;
+    color: #e3b673;
+    background: none;
+    border: 1px solid #e3b673;
+    border-radius: 30px;
+    padding: 6px 23px;
+    font-size: 14px;
 }
 
 /* RESPONSIVE */
@@ -770,12 +779,6 @@
   }
 }
 
-
-
-
-
-
-
 /* =========================================
    PREMIUM VILLA AMENITIES DESIGN
 ========================================= */
@@ -904,16 +907,6 @@
     font-size: 14px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 /* =========================================
    VILLA GALLERY SECTION
@@ -1045,15 +1038,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* =========================================
    VILLA LOCATION SECTION
 ========================================= */
@@ -1112,10 +1096,10 @@
 }
 
 .villaLocationDescription p {
-     color: #b7b7b7;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
+  color: #b7b7b7;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Responsive */
@@ -1152,14 +1136,6 @@
     height: 280px;
   }
 }
-
-
-
-
-
-
-
-
 
 /* =========================================
    LUXURY COTTAGE SECTION
@@ -1233,9 +1209,9 @@
 
 .luxuryCottageContent p {
   color: #b7b7b7;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Button */
@@ -1309,10 +1285,6 @@
     font-size: 16px;
   }
 }
-
-
-
-
 
 /* =========================================
    POLICY SECTION

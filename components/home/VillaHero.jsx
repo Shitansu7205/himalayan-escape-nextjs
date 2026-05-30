@@ -19,7 +19,6 @@ export default function VillaHero() {
           <span>Home</span>
           <ChevronRight size={18} />
           <span>Welcome to Shilayvas Cottages</span>
-      
 
           <button className="svHero__brochure">
             <FileText size={18} />

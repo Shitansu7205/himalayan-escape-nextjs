@@ -37,7 +37,7 @@ export default function VillaHeader() {
               onClick={() => window.location.href = "tel:8627045425"}
           >
             <span className="villaHeader__searchPill-text">
-              The Mohru Estate Chail W/ He...
+              Shilayvas Cottages
             </span>
             <i></i>
             <span className="villaHeader__searchPill-text">Select Date</span>

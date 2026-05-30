@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   Bed,
+  Gift,
   Bath,
   Coffee,
   FileText,
@@ -26,6 +27,8 @@ import {
   Waves,
 } from "lucide-react";
 import "../../style/home/villa-overview.css";
+import Popup from "../modal/Popup";
+import toast from "react-hot-toast";
 
 const tabs = [
   "Overview",
@@ -126,8 +129,35 @@ export default function VillaOverviewSection() {
     },
   ];
 
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    checkIn: "",
+    checkOut: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+     toast.success("Form submitted successfully!");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      checkIn: "",
+      checkOut: "",
+    });
+  };
   return (
     <section className="villaDetail">
+      <Popup/>
       <div className="villaDetail__tabs">
         {tabs.map((tab) => (
           <button
@@ -225,10 +255,10 @@ export default function VillaOverviewSection() {
               <a href="#">
                 <button>View More</button>
               </a>
-              <a href="#">
+              <a href="telto:+918627045425">
                 {" "}
                 <button>Book Now</button>
-              </a>
+              </a>  
             </div>
           </section>
 
@@ -267,7 +297,7 @@ export default function VillaOverviewSection() {
 
           <section id="amenities" className="villaAmenitiesSection villaBlock">
             <div className="villaAmenitiesContainer">
-              <h1>Our Amenities</h1>
+              <h1>Facilities & Amenities</h1>
 
               <div className="villaAmenitiesGrid">
                 {/* Item */}
@@ -404,10 +434,10 @@ export default function VillaOverviewSection() {
                 </p>
 
                 <div className="policyBtns">
-                  <a href="#">
+                  <a href="telto:+918627045425">
                     <button>View More</button>
                   </a>
-                  <a href="#">
+                  <a href="telto:+918627045425">
                     {" "}
                     <button>Book Now</button>
                   </a>
@@ -495,15 +525,15 @@ export default function VillaOverviewSection() {
 
               {/* Buttons */}
 
-               <div className="policyBtns">
-                  <a href="#">
-                    <button>Refund Policy</button>
-                  </a>
-                  <a href="#">
-                    {" "}
-                    <button>House Rules</button>
-                  </a>
-                </div>
+              <div className="policyBtns">
+                <a href="#">
+                  <button>Refund Policy</button>
+                </a>
+                <a href="#">
+                  {" "}
+                  <button>House Rules</button>
+                </a>
+              </div>
 
               {/* Policy List */}
 
@@ -552,47 +582,104 @@ export default function VillaOverviewSection() {
 
         <aside className="villaBookingSticky">
           <div className="bookingCard">
-            <p className="oldPrice">₹100,733</p>
-            <h2>
-              ₹81,186 <span>(for 6 rooms) Per Night + Taxes</span>
-            </h2>
+            <h2 className="text-sm font-semibold">Enquiry Form</h2>
 
-            <div className="bookingGrid">
-              <div>
-                <label>Check-in⌄</label>
-                <strong>Add Date</strong>
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded"
+                required
+                style={{borderColor: "#e3b67351"}}
+              />
+
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded"
+                required
+                style={{borderColor: "#e3b67351"}}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-2 border rounded"
+                required
+                style={{borderColor: "#e3b67351"}}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full p-2 border rounded"
+                required
+                style={{borderColor: "#e3b67351"}}
+              />
+
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  type="date"
+                  name="checkIn"
+                  value={formData.checkIn}
+                  onChange={handleChange}
+                  className="w-full p-2 border rounded"
+                     style={{borderColor: "#e3b67351"}}
+                />
+
+                <input
+                  type="date"
+                  name="checkOut"
+                  value={formData.checkOut}
+                  onChange={handleChange}
+                  className="w-full p-2 border rounded"
+                     style={{borderColor: "#e3b67351"}}
+                />
               </div>
-              <div>
-                <label>Check-out⌄</label>
-                <strong>Add Date</strong>
-              </div>
-              <div>
-                <label>Guests</label>
-                <strong>6 Adults, 0 Chil...</strong>
-              </div>
-              <div>
-                <label>No. of Rooms</label>
-                <strong>6 Rooms</strong>
-              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition"
+                style={{ backgroundColor: "#e3b673" }}
+              >
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+
+          <div className="villaContactCard mt-2 p-2 border border-green-500/30 rounded-xl bg-green-500/10 text-center flex items-center justify-center gap-2">
+            <Gift className="text-green-500" size={18} />
+
+            <h3 className="font-semibold text-green-600 text-sm sm:text-base">
+              Reserve to get exciting offer for this property!
+            </h3>
+          </div>
+
+          {/* Host Box */}
+          <div className="hostBox mt-4 flex items-center gap-3">
+            <Phone size={24} />
+            <div className="hostInfoNew">
+              <strong>Connect with Host</strong>
+              <button
+                className="block text-sm underline"
+                style={{ marginLeft: "30px" }}
+                onClick={() => (window.location.href = "tel:8627045425")}
+              >
+                Request Callback
+              </button>
             </div>
-          </div>
-
-          <h3 className="bestPrice">Select Dates for Best Price</h3>
-
-          <div className="offerBox">
-            Reserve to get exciting offer for this property!
-          </div>
-
-          <button className="selectDateBtn">Select Dates</button>
-
-          <div className="refundText">
-            For Cancellation and Refund Policy, <a href="#">click here</a>
-          </div>
-
-          <div className="hostBox">
-            <Phone size={28} />
-            <strong>Connect with Host</strong>
-            <button>Request Callback</button>
           </div>
         </aside>
       </div>
