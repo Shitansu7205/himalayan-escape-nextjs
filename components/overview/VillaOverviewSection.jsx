@@ -255,7 +255,7 @@ export default function VillaOverviewSection() {
               <a href="#">
                 <button>View More</button>
               </a>
-              <a href="telto:+918627045425">
+              <a href="telto:+919816032103">
                 {" "}
                 <button>Book Now</button>
               </a>  
@@ -434,10 +434,10 @@ export default function VillaOverviewSection() {
                 </p>
 
                 <div className="policyBtns">
-                  <a href="telto:+918627045425">
+                  <a href="telto:+919816032103">
                     <button>View More</button>
                   </a>
-                  <a href="telto:+918627045425">
+                  <a href="telto:+919816032103">
                     {" "}
                     <button>Book Now</button>
                   </a>
@@ -675,7 +675,7 @@ export default function VillaOverviewSection() {
               <button
                 className="block text-sm underline"
                 style={{ marginLeft: "30px" }}
-                onClick={() => (window.location.href = "tel:8627045425")}
+                onClick={() => (window.location.href = "tel:9816032103")}
               >
                 Request Callback
               </button>

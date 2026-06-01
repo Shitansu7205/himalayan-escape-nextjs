@@ -64,7 +64,8 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex items-start gap-3 hover:text-white transition cursor-pointer">
                 <Phone size={16} className="mt-0.5 text-white/60" />
-                <span>8627045425</span>
+                <span>+91 98160 32103 ,</span>
+                <span>+91 80911 15150</span>
               </li>
 
               <li className="flex items-start gap-3 hover:text-white transition cursor-pointer">
